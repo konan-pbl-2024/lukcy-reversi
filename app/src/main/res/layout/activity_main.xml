@@ -18,7 +18,7 @@
         app:layout_constraintHorizontal_bias="0.304"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.664" />
+        app:layout_constraintVertical_bias="0.605" />
 
     <Button
         android:id="@+id/button"
@@ -36,8 +36,11 @@
         android:id="@+id/imageView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/osero_kawai"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="-158dp" />
+        android:layout_marginBottom="164dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/osero_kawai" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
