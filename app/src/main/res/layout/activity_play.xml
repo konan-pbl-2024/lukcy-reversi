@@ -53,4 +53,14 @@
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/play_2" />
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="290dp"
+        android:layout_height="269dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/Osero_ban"
+        app:layout_constraintStart_toStartOf="@+id/Osero_ban"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/vs" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
