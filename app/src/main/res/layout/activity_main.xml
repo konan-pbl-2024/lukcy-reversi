@@ -6,50 +6,38 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/haikei_fire"
-        android:layout_width="1111dp"
-        android:layout_height="1401dp"
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="86dp"
+        android:layout_height="22dp"
+        android:scaleX="3"
+        android:scaleY="3"
+        android:text="Lucky Reversi"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.304"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/haikei_kaminari" />
+        app:layout_constraintVertical_bias="0.664" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="▶"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.13"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.881" />
 
     <ImageView
-        android:id="@+id/Osero_ban"
-        android:layout_width="410dp"
-        android:layout_height="487dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/osero_banmen" />
-
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="114dp"
-        android:layout_height="111dp"
-        android:rotation="-178"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.996"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/play_1" />
-
-    <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="148dp"
-        android:layout_height="124dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/play_2" />
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/osero_kawai"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-158dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
