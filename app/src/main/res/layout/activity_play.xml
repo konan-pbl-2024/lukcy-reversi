@@ -1097,7 +1097,7 @@
         app:srcCompat="@drawable/black" />
 
     <ImageView
-        android:id="@+id/kuto_77"
+        android:id="@+id/kuro_77"
         android:layout_width="62dp"
         android:layout_height="61dp"
         app:layout_constraintBottom_toBottomOf="parent"
