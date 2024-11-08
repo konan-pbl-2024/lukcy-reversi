@@ -159,6 +159,12 @@ public class PlayActivity extends AppCompatActivity {
         shiro[7][6] = findViewById(R.id.shiro_87);
         shiro[7][7] = findViewById(R.id.shiro_88);
 
+        for (int i = 0; i < SIZE; i++) {
+            for (int j = 0; j < SIZE; j++) {
+                shiro[i][j].setVisibility(View.INVISIBLE);
+                kuro[i][j].setVisibility(View.INVISIBLE);
+            }
+        }
 
         for (int i = 0; i < SIZE; i++) {
             for (int j = 0; j < SIZE; j++) {
