@@ -12,7 +12,7 @@
         android:layout_height="1401dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.302"
+        app:layout_constraintHorizontal_bias="0.297"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/haikei_kaminari" />
@@ -1571,10 +1571,10 @@
         android:layout_height="69dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.28"
+        app:layout_constraintHorizontal_bias="0.289"
         app:layout_constraintStart_toStartOf="@+id/Osero_ban"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.741"
+        app:layout_constraintVertical_bias="0.735"
         app:srcCompat="@drawable/white" />
 
     <ImageView
@@ -1586,7 +1586,7 @@
         app:layout_constraintHorizontal_bias="0.15"
         app:layout_constraintStart_toStartOf="@+id/Osero_ban"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.741"
+        app:layout_constraintVertical_bias="0.735"
         app:srcCompat="@drawable/white" />
 
     <ImageView
@@ -1600,16 +1600,17 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.444"
         app:srcCompat="@drawable/white" />
+
     <ImageView
         android:id="@+id/kuro_45"
         android:layout_width="64dp"
         android:layout_height="57dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.561"
+        app:layout_constraintHorizontal_bias="0.567"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.451"
+        app:layout_constraintVertical_bias="0.445"
         app:srcCompat="@drawable/black" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
