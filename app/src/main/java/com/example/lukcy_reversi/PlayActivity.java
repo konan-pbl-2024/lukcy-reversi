@@ -9,9 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class PlayActivity extends AppCompatActivity {
 
     private static final int SIZE = 8;
-    private static final int EMPTY = 0;
-    private static final int BLACK = 1;
-    private static final int WHITE = 2;
+    private static int TURN = 0;
     private int[][] board = new int[SIZE][SIZE];
     private boolean blackTurn = true;
     private ImageView[][] kuro = new ImageView[SIZE][SIZE];
@@ -181,15 +179,15 @@ public class PlayActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
                         // Cycle through states when white is clicked
-                        if (shiro[row][col].getAlpha() == 1.0f) {  // If it's currently white
+                        if ((shiro[row][col].getAlpha() == 1.0f)&&(TURN == 1)) {  // If it's currently white
                             // Change to transparent (reset both)
                             shiro[row][col].setAlpha(0.0f);
                             kuro[row][col].setAlpha(0.0f);
-                        } else if (kuro[row][col].getAlpha() == 1.0f) { // If it's currently black
+                        } else if ((kuro[row][col].getAlpha() == 1.0f)&&(TURN == 1)) { // If it's currently black
                             // Change to white
                             kuro[row][col].setAlpha(0.0f);
                             shiro[row][col].setAlpha(1.0f);
-                        } else {
+                        } else if(TURN == 0){
                             // Change to black if transparent
                             shiro[row][col].setAlpha(0.0f);
                             kuro[row][col].setAlpha(1.0f);
@@ -201,18 +199,35 @@ public class PlayActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
                         // Cycle through states when black is clicked
-                        if (kuro[row][col].getAlpha() == 1.0f) {  // If it's currently black
-                            // Change to transparent (reset both)
-                            kuro[row][col].setAlpha(0.0f);
-                            shiro[row][col].setAlpha(0.0f);
-                        } else if (shiro[row][col].getAlpha() == 1.0f) { // If it's currently white
-                            // Change to black
-                            shiro[row][col].setAlpha(0.0f);
-                            kuro[row][col].setAlpha(1.0f);
-                        } else {
-                            // Change to white if transparent
-                            kuro[row][col].setAlpha(0.0f);
-                            shiro[row][col].setAlpha(1.0f);
+                        if(TURN == 0) {
+
+                            if (kuro[row][col].getAlpha() == 1.0f) {  // If it's currently black
+                                // Change to transparent (reset both)
+                                kuro[row][col].setAlpha(0.0f);
+                                shiro[row][col].setAlpha(0.0f);
+                            } else if (shiro[row][col].getAlpha() == 1.0f) { // If it's currently white
+                                // Change to black
+                                shiro[row][col].setAlpha(0.0f);
+                                kuro[row][col].setAlpha(1.0f);
+                            }else{
+                                // Change to black if transparent
+                                shiro[row][col].setAlpha(0.0f);
+                                kuro[row][col].setAlpha(1.0f);
+                            }
+                        } else if(TURN == 1) {
+                            if (shiro[row][col].getAlpha() == 1.0f) {  // If it's currently white
+                                // Change to transparent (reset both)
+                                shiro[row][col].setAlpha(0.0f);
+                                kuro[row][col].setAlpha(0.0f);
+                            } else if (kuro[row][col].getAlpha() == 1.0f) { // If it's currently black
+                                // Change to white
+                                kuro[row][col].setAlpha(0.0f);
+                                shiro[row][col].setAlpha(1.0f);
+                            }else{
+                                // Change to white if transparent
+                                kuro[row][col].setAlpha(0.0f);
+                                shiro[row][col].setAlpha(1.0f);
+                            }
                         }
                     }
                 });
