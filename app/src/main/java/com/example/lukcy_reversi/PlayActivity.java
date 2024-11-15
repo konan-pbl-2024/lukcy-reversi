@@ -161,10 +161,18 @@ public class PlayActivity extends AppCompatActivity {
 
         for (int i = 0; i < SIZE; i++) {
             for (int j = 0; j < SIZE; j++) {
-                shiro[i][j].setVisibility(View.INVISIBLE);
-                kuro[i][j].setVisibility(View.INVISIBLE);
+                shiro[i][j].setAlpha(0.0f);
+                kuro[i][j].setAlpha(0.0f);
             }
         }
+        shiro[3][3].setAlpha(1.0f);
+        kuro[3][3].setVisibility(View.INVISIBLE);
+        kuro[3][4].setAlpha(1.0f);
+        shiro[3][4].setVisibility(View.INVISIBLE);
+        kuro[4][3].setAlpha(1.0f);
+        shiro[4][3].setVisibility(View.INVISIBLE);
+        shiro[4][4].setAlpha(1.0f);
+        kuro[4][4].setVisibility(View.INVISIBLE);
 
         for (int i = 0; i < SIZE; i++) {
             for (int j = 0; j < SIZE; j++) {
@@ -175,6 +183,7 @@ public class PlayActivity extends AppCompatActivity {
                     public void onClick(View view) {
                         shiro[row][col].setVisibility(View.INVISIBLE);
                         kuro[row][col].setVisibility(View.VISIBLE);
+                        kuro[row][col].setAlpha(1.0f);
                     }
                 });
                 kuro[i][j].setOnClickListener(new View.OnClickListener(){
@@ -182,13 +191,11 @@ public class PlayActivity extends AppCompatActivity {
                     public void onClick(View view) {
                         shiro[row][col].setVisibility(View.VISIBLE);
                         kuro[row][col].setVisibility(View.INVISIBLE);
+                        shiro[row][col].setAlpha(1.0f);
                     }
                 });
             }
         }
-        board[3][3] = WHITE;
-        board[3][4] = BLACK;
-        board[4][3] = BLACK;
-        board[4][4] = WHITE;
+
     }
 }
