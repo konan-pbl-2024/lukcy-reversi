@@ -166,36 +166,57 @@ public class PlayActivity extends AppCompatActivity {
             }
         }
         shiro[3][3].setAlpha(1.0f);
-        kuro[3][3].setVisibility(View.INVISIBLE);
         kuro[3][4].setAlpha(1.0f);
-        shiro[3][4].setVisibility(View.INVISIBLE);
         kuro[4][3].setAlpha(1.0f);
-        shiro[4][3].setVisibility(View.INVISIBLE);
         shiro[4][4].setAlpha(1.0f);
-        kuro[4][4].setVisibility(View.INVISIBLE);
+
 
         for (int i = 0; i < SIZE; i++) {
             for (int j = 0; j < SIZE; j++) {
                 final int row = i;
                 final int col = j;
-                shiro[i][j].setOnClickListener(new View.OnClickListener(){
+
+                // Set onClickListener for white pieces (shiro)
+                shiro[i][j].setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        shiro[row][col].setVisibility(View.INVISIBLE);
-                        kuro[row][col].setVisibility(View.VISIBLE);
-                        kuro[row][col].setAlpha(1.0f);
+                        // Cycle through states when white is clicked
+                        if (shiro[row][col].getAlpha() == 1.0f) {  // If it's currently white
+                            // Change to transparent (reset both)
+                            shiro[row][col].setAlpha(0.0f);
+                            kuro[row][col].setAlpha(0.0f);
+                        } else if (kuro[row][col].getAlpha() == 1.0f) { // If it's currently black
+                            // Change to white
+                            kuro[row][col].setAlpha(0.0f);
+                            shiro[row][col].setAlpha(1.0f);
+                        } else {
+                            // Change to black if transparent
+                            shiro[row][col].setAlpha(0.0f);
+                            kuro[row][col].setAlpha(1.0f);
+                        }
                     }
                 });
-                kuro[i][j].setOnClickListener(new View.OnClickListener(){
+// Set onClickListener for black pieces (kuro)
+                kuro[i][j].setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        shiro[row][col].setVisibility(View.VISIBLE);
-                        kuro[row][col].setVisibility(View.INVISIBLE);
-                        shiro[row][col].setAlpha(1.0f);
+                        // Cycle through states when black is clicked
+                        if (kuro[row][col].getAlpha() == 1.0f) {  // If it's currently black
+                            // Change to transparent (reset both)
+                            kuro[row][col].setAlpha(0.0f);
+                            shiro[row][col].setAlpha(0.0f);
+                        } else if (shiro[row][col].getAlpha() == 1.0f) { // If it's currently white
+                            // Change to black
+                            shiro[row][col].setAlpha(0.0f);
+                            kuro[row][col].setAlpha(1.0f);
+                        } else {
+                            // Change to white if transparent
+                            kuro[row][col].setAlpha(0.0f);
+                            shiro[row][col].setAlpha(1.0f);
+                        }
                     }
                 });
             }
         }
-
     }
 }
