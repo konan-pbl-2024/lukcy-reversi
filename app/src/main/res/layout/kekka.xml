@@ -17,6 +17,21 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.263" />
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="463dp"
+        android:layout_height="563dp"
+        android:rotation="-54"
+        android:rotationX="50"
+        android:rotationY="-37"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.826"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.642"
+        app:srcCompat="@drawable/haikei_kaminari" />
+
     <Button
         android:id="@+id/again_game"
         android:layout_width="wrap_content"
@@ -24,7 +39,9 @@
         android:text="AGAIN!!"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.169"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.317" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
