@@ -2,6 +2,7 @@ package com.example.lukcy_reversi;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.GridLayout;
 import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
@@ -168,7 +169,17 @@ public class PlayActivity extends AppCompatActivity {
         kuro[4][3].setAlpha(1.0f);
         shiro[4][4].setAlpha(1.0f);
 
-
+        Button change = (Button) findViewById(R.id.change);
+        change.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(TURN == 0){
+                    TURN = 1;
+                }else if(TURN == 1){
+                    TURN = 0;
+                }
+            }
+        });
         for (int i = 0; i < SIZE; i++) {
             for (int j = 0; j < SIZE; j++) {
                 final int row = i;
