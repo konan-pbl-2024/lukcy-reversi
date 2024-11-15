@@ -11,7 +11,9 @@ public class PlayActivity extends AppCompatActivity {
 
     private static final int SIZE = 8;
     private static int TURN = 0;
-//    private int[][] board = new int[SIZE][SIZE];
+    private static double random = 0;
+    private static int count = 0;
+    //    private int[][] board = new int[SIZE][SIZE];
 //    private boolean blackTurn = true;
     private ImageView[][] kuro = new ImageView[SIZE][SIZE];
     private ImageView[][] shiro = new ImageView[SIZE][SIZE];
@@ -177,6 +179,23 @@ public class PlayActivity extends AppCompatActivity {
                     TURN = 1;
                 }else if(TURN == 1){
                     TURN = 0;
+                }
+                count += 1;
+                if(count >= 50){
+                    random = Math.random();
+                    if(random >= 0.9){
+                        for (int i = 0; i < SIZE; i++) {
+                            for (int j = 0; j < SIZE; j++) {
+                                shiro[i][j].setAlpha(0.0f);
+                                kuro[i][j].setAlpha(0.0f);
+                            }
+                        }
+                        shiro[3][3].setAlpha(1.0f);
+                        kuro[3][4].setAlpha(1.0f);
+                        kuro[4][3].setAlpha(1.0f);
+                        shiro[4][4].setAlpha(1.0f);
+                        count = 0;
+                    }
                 }
             }
         });
